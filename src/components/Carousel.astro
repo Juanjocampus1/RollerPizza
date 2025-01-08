@@ -1,0 +1,100 @@
+---
+const slides = [
+    {
+        title: 'Medianas 6.95€. Familiares 11.95€',
+        content: 'Todos los días, en local o para recoger, las mejores pizzas al alcance de todos',
+        image: '/images/slider/pizza_slider_1.png'
+    },
+    {
+        title: 'Entrantes: 1 por 3.75€. 2 por 6€.',
+        content: 'Perfectos para abrir boca.',
+        image: '/images/slider/bread_slider_2.png'
+    },
+    {
+        title: 'Medianas 5,95€. Familiares 9.95€.',
+        content: 'De lunes a jueves no festivos en local o para recoger. De 13.00 a 16.00',
+        image: '/images/slider/pizza_slider_3.jpg'
+    }
+]
+---
+
+{
+    slides.map(({title, content, image}) => (
+        <div class="relative h-96 slider-box flex flex-row">
+            <ul>
+                <li>
+                    <img
+                        class="w-full h-full object-cover"
+                        src={image}
+                        alt={title}
+                        />
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <h2 class="text-3xl font-bold">{title}</h2>
+                                <p class="text-lg">{content}</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+        </div>
+    ))
+}
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .slider-box {
+        height: auto;
+    }
+
+    .slider-box ul {
+        display: flex;
+        padding: 0;
+        width: 100%;
+        animation: slide 20s infinite alternate ease-in-out;
+    }
+
+    .slider-box li {
+        width: 100%;
+        list-style: none;
+        position: relative;
+    }
+
+    .slider-box img {
+        width: 100%;
+    }
+
+    @keyframes slide {
+        0% {
+            margin-left: 0;
+        }
+        20% {
+            margin-left: 0;
+        }
+        25% {
+            margin-left: -100%;
+        }
+        45% {
+            margin-left: -100%;
+        }
+        50% {
+            margin-left: -200%;
+        }
+        70% {
+            margin-left: -200%;
+        }
+        75% {
+            margin-left: -300%;
+        }
+        95% {
+            margin-left: -300%;
+        }
+        100% {
+            margin-left: 0;
+        }
+    }
+</style>
