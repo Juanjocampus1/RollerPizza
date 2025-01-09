@@ -5,9 +5,11 @@ import SectionContainer from '../components/SectionContainer.astro';
 import Navbar from '../components/Navbar.astro';
 import Carousel from '../components/Carousel.astro';
 import Titles from '../components/Titles.astro';
+import Buttons from '../components/Buttons.astro';
+import Entrantes from '../components/Entrantes.astro';
 ---
 
-<Layout>
+<Layout title='Roller Pizza' description='disfruta de las mejores pizzas de todo madrid'>
 	<main>
 		<SectionContainer id="top" class="flex gap-64 mt-4 flex-row">
 			<div class="flex justify-start">
@@ -25,5 +27,9 @@ import Titles from '../components/Titles.astro';
 		<SectionContainer class="gap-y-10" >
 			<Titles title="NUESTRO MENU"/>
 		</SectionContainer>
+		<SectionContainer>
+			<Buttons/>
+		</SectionContainer>
+		<Entrantes/>
 	</main>
 </Layout>

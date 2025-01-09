@@ -22,19 +22,21 @@ const { class: className } = Astro.props
 
 <div class={`relative overflow-hidden h-full w-full ${className}`}>
     <div class="flex w-[300%] animate-slide">
-        {slides.map(({ title, content, image }, index) => (
-            <div class="flex-shrink-0 w-full h-full relative">
-                <img
-                    src={image}
-                    alt={title}
-                    class="w-full h-full object-cover"
-                />
-                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center">
-                    <h2 class="text-3xl font-bold mb-2">{title}</h2>
-                    <p class="text-lg">{content}</p>
+        {
+            slides.map(({ title, content, image }) => (
+                <div class="flex-shrink-0 w-full h-full relative">
+                    <img
+                        src={image}
+                        alt={title}
+                        class="w-full h-full object-cover"
+                    />
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center">
+                        <h2 class="text-3xl font-bold mb-2">{title}</h2>
+                        <p class="text-lg">{content}</p>
+                    </div>
                 </div>
-            </div>
-        ))}
+            ))
+        }
     </div>
 </div>
 

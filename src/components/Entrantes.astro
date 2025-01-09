@@ -1,0 +1,121 @@
+---
+const Imagnes = [
+    {
+        imagen: "/images/icons/pizza.png",
+        description: "imagen de una pizza"
+    }
+]
+---
+
+<div class="grid grid-cols-3 ml-20 mr-20 mt-10">
+    <div class="col-span-3 bg-gray-400 rounded border border-[#b3b3b3]">
+        <h1 class="text-center text-3xl">PRECIOS A DOMICILIO</h1>
+        
+        <div class="grid grid-cols-6">
+            <div class="flex justify-center items-center col-span-3">
+                <h2 class="text-2xl font-semibold mb-2">MEDIANAS</h2>
+            </div>
+            <div class="flex justify-center items-center col-span-3">
+                <h2 class="text-2xl font-semibold mb-2">FAMILIARES</h2>
+            </div>
+            <div class="flex justify-center items-center">
+                <div>
+                    {
+                        Imagnes.map(({imagen, description}) => (
+                            <span class="flex justify-center items-center w-10 h-10">
+                                <img src={imagen} alt={description}>
+                            </span>
+                        ))
+                    }
+                    <div class="relative flex justify-center items-center">
+                        <span class="text-xl text-red-600">
+                            10,45€
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                <div>
+                    {
+                        Imagnes.map(({imagen, description}) => (
+                            <span class="flex justify-center items-center w-10 h-10 gap-x-2">
+                                <img src={imagen} alt={description}>
+                                <img src={imagen} alt={description}>
+                            </span>
+                        ))
+                    }
+                <div class="relative flex justify-center items-center">
+                        <span class="text-xl text-red-600">
+                            17,95€
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                <div>
+                    {
+                        Imagnes.map(({imagen, description}) => (
+                            <span class="flex justify-center items-center w-10 h-10 gap-x-2">
+                                <img src={imagen} alt={description}>
+                                <img src={imagen} alt={description}>
+                                <img src={imagen} alt={description}>
+                            </span>
+                        ))
+                    }
+                    <div class="relative flex justify-center items-center">
+                        <span class="text-xl text-red-600">
+                            23.00€
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                <div>
+                    {
+                        Imagnes.map(({imagen, description}) => (
+                            <span class="flex justify-center items-center w-10 h-10">
+                                <img src={imagen} alt={description}>
+                            </span>
+                        ))
+                    }
+                    <div class="relative flex justify-center items-center">
+                        <span class="text-xl text-red-600">
+                            16.45€
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                <div>
+                    {
+                        Imagnes.map(({imagen, description}) => (
+                            <span class="flex justify-center items-center w-10 h-10 gap-x-2">
+                                <img src={imagen} alt={description}>
+                                <img src={imagen} alt={description}>
+                            </span>
+                        ))
+                    }
+                    <div class="relative flex justify-center items-center">
+                        <span class="text-xl text-red-600">
+                            27.95€
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                {
+                    Imagnes.map(({imagen, description}) => (
+                        <span class="flex justify-center items-center w-10 h-10 gap-x-2">
+                            <img src={imagen} alt={description}>
+                            <img src={imagen} alt={description}>
+                            <img src={imagen} alt={description}>
+                        </span>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-span-1 bg-gray-400 rounded mt-4 mb-4 mr-2 border border-[#b3b3b3]">02</div>
+    <div class="col-span-2 bg-gray-400 rounded mt-4 mb-4 ml-2 border border-[#b3b3b3]">03</div>
+    <div class="col-span-3 bg-gray-400 rounded border border-[#b3b3b3]">04</div>
+</div>
