@@ -2,16 +2,18 @@
 const Imagnes = [
     {
         imagen: "/images/icons/pizza.png",
-        description: "imagen de una pizza"
+        description: "icono de una pizza"
     }
 ]
 ---
 
 <div class="grid grid-cols-3 ml-20 mr-20 mt-10">
     <div class="col-span-3 bg-gray-400 rounded border border-[#b3b3b3]">
-        <h1 class="text-center text-3xl">PRECIOS A DOMICILIO</h1>
+        <h1 class="text-center text-3xl mt-2">
+            PRECIOS A DOMICILIO
+        </h1>
         
-        <div class="grid grid-cols-6">
+        <div class="grid grid-cols-6 mb-4">
             <div class="flex justify-center items-center col-span-3">
                 <h2 class="text-2xl font-semibold mb-2">MEDIANAS</h2>
             </div>
@@ -103,19 +105,94 @@ const Imagnes = [
                 </div>
             </div>
             <div class="flex justify-center items-center">
-                {
-                    Imagnes.map(({imagen, description}) => (
-                        <span class="flex justify-center items-center w-10 h-10 gap-x-2">
-                            <img src={imagen} alt={description}>
-                            <img src={imagen} alt={description}>
-                            <img src={imagen} alt={description}>
+                <div>
+                    {
+                        Imagnes.map(({imagen, description}) => (
+                            <span class="flex justify-center items-center w-10 h-10 gap-x-2">
+                                <img src={imagen} alt={description}>
+                                <img src={imagen} alt={description}>
+                                <img src={imagen} alt={description}>
+                            </span>
+                        ))
+                    }
+                    <div class="relative flex justify-center items-center">
+                        <span class="text-xl text-red-600">
+                            38.00€
                         </span>
-                    ))
-                }
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="grid grid-cols-2">
+            <div class="flex justify-center items-center">
+                <p>Realizamos reparto a domicilio en Humanes y Moraleja de Enmedio con un suplemento de 3€ por pedido. </p>
+            </div>
+            <div class="flex justify-center items-center">
+                <p>Realizar estos pedidos en nuestra tienda de Fuenlabrada 2.</p>
+            </div>  
+        </div>
+    </div>
+
+    <div class="col-span-1 bg-gray-400 rounded mt-4 mb-4 mr-2 border border-[#b3b3b3]">
+        <div class="flex justify-center items-center mb-4 mt-5">
+            <div class="grid grid-cols-2 gap-x-20">
+                <h2 class="text-center text-2xl mt-2 col-span-2 font-semibold mb-3">
+                    ESCOGE EL TAMAÑO
+                </h2>
+                <div class="flex justify-center items-center">
+                    <span class="text-black text-xl">MEDIANA</span>
+                </div>
+                <div class="flex justify-center items-center">
+                    <span class="text-black text-xl">FAMILIAR</span>
+                </div>
+                <div>
+                    <p class="relative text-red-500 flex justify-center items-center">30cm</p>
+                </div>
+                <div>
+                    <p class="relative text-red-500 flex justify-center items-center">40cm</p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-span-1 bg-gray-400 rounded mt-4 mb-4 mr-2 border border-[#b3b3b3]">02</div>
-    <div class="col-span-2 bg-gray-400 rounded mt-4 mb-4 ml-2 border border-[#b3b3b3]">03</div>
+
+    <div class="col-span-2 bg-gray-400 rounded mt-4 mb-4 ml-2 border border-[#b3b3b3]">
+        <div class="flex justify-center items-center mb-4 mt-2">
+            <div class="grid grid-cols-3 gap-x-20">
+                <h2 class="text-center text-2xl mt-2 col-span-3 font-semibold mb-3">
+                    ESCOGE TU MASA
+                </h2>
+                <div class="flex justify-center items-center">
+                    <span class="text-black text-xl">FINA</span>
+                </div>
+                <div class="flex justify-center items-center">
+                    <span class="text-black text-xl">NORMAL</span>
+                </div>
+                <div class="flex justify-center items-center">
+                    <span class="text-black text-xl">ROLLER</span>
+                </div>
+                <div>
+                    <p class="relative text-red-500 flex justify-center items-center">
+                        Bordes crujientes
+                    </p>
+                </div>
+                <div>
+                    <p class="relative text-red-500 flex justify-center items-center">
+                        Estilo tradicional
+                    </p>
+                </div>
+                <div>
+                    <p class="relative text-red-500 flex justify-center items-center">
+                        Borde de queso
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-3 bg-black border-b border-r border-l border-[#b3b3b3]">
+            <p class="text-center text-white">
+                Masa Rollers: Mediana +1,5€ | Familiar +2€
+                </p>
+        </div>
+    </div>
     <div class="col-span-3 bg-gray-400 rounded border border-[#b3b3b3]">04</div>
 </div>
