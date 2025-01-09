@@ -1,0 +1,20 @@
+---
+interface Props{
+    title: string;
+}
+
+const{ title} = Astro.props
+---
+<div class="flex flex-col mt-10 items-center justify-center">
+    <h2 class="text-3xl font-bold tracking-widest text-gray-800">{title}</h2>
+    <div class="flex items-center mt-2">
+        <div class="h-[1px] w-10 bg-black"></div>
+        <div class="flex items-center mx-2 space-x-1">
+            <div class="w-2 h-2 bg-yellow-600 rotate-45"></div>
+            <div class="w-2 h-2 bg-yellow-600 rotate-45"></div>
+            <div class="w-2 h-2 bg-yellow-600 rotate-45"></div>
+        </div>
+        <div class="h-[1px] w-10 bg-black"></div>
+    </div>
+</div>
+

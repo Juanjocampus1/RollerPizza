@@ -1,13 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
 import SectionContainer from '../components/SectionContainer.astro';
 import Navbar from '../components/Navbar.astro';
 import Carousel from '../components/Carousel.astro';
+import Titles from '../components/Titles.astro';
 ---
 
 <Layout>
 	<main>
-		<SectionContainer id="top" class="flex gap-64 mt-8 flex-row">
+		<SectionContainer id="top" class="flex gap-64 mt-4 flex-row">
 			<div class="flex justify-start">
 				<img
 					class="w-30 h-12" 
@@ -19,6 +21,9 @@ import Carousel from '../components/Carousel.astro';
 				<Navbar />		
 			</div>
 		</SectionContainer>
-		<Carousel/>
+		<Carousel class="flex flex-row "/>
+		<SectionContainer class="gap-y-10" >
+			<Titles title="NUESTRO MENU"/>
+		</SectionContainer>
 	</main>
 </Layout>

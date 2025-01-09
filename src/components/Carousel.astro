@@ -16,85 +16,46 @@ const slides = [
         image: '/images/slider/pizza_slider_3.jpg'
     }
 ]
+
+const { class: className } = Astro.props
 ---
 
-{
-    slides.map(({title, content, image}) => (
-        <div class="relative h-96 slider-box flex flex-row">
-            <ul>
-                <li>
-                    <img
-                        class="w-full h-full object-cover"
-                        src={image}
-                        alt={title}
-                        />
-                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                            <div class="text-white text-center">
-                                <h2 class="text-3xl font-bold">{title}</h2>
-                                <p class="text-lg">{content}</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-        </div>
-    ))
-}
+<div class={`relative overflow-hidden h-full w-full ${className}`}>
+    <div class="flex w-[300%] animate-slide">
+        {slides.map(({ title, content, image }, index) => (
+            <div class="flex-shrink-0 w-full h-full relative">
+                <img
+                    src={image}
+                    alt={title}
+                    class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center">
+                    <h2 class="text-3xl font-bold mb-2">{title}</h2>
+                    <p class="text-lg">{content}</p>
+                </div>
+            </div>
+        ))}
+    </div>
+</div>
 
 <style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+  @keyframes slide {
+    0%, 20% {
+      transform: translateX(0);
     }
+    25%, 45% {
+      transform: translateX(-100%);
+    }
+    50%, 70% {
+      transform: translateX(-200%);
+    }
+    75%, 100% {
+      transform: translateX(0);
+    }
+  }
 
-    .slider-box {
-        height: auto;
-    }
+  .animate-slide {
+    animation: slide 20s infinite ease-in-out;
+  }
 
-    .slider-box ul {
-        display: flex;
-        padding: 0;
-        width: 100%;
-        animation: slide 20s infinite alternate ease-in-out;
-    }
-
-    .slider-box li {
-        width: 100%;
-        list-style: none;
-        position: relative;
-    }
-
-    .slider-box img {
-        width: 100%;
-    }
-
-    @keyframes slide {
-        0% {
-            margin-left: 0;
-        }
-        20% {
-            margin-left: 0;
-        }
-        25% {
-            margin-left: -100%;
-        }
-        45% {
-            margin-left: -100%;
-        }
-        50% {
-            margin-left: -200%;
-        }
-        70% {
-            margin-left: -200%;
-        }
-        75% {
-            margin-left: -300%;
-        }
-        95% {
-            margin-left: -300%;
-        }
-        100% {
-            margin-left: 0;
-        }
-    }
 </style>
