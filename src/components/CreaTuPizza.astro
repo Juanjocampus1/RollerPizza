@@ -1,5 +1,7 @@
 ---
 import StarIcon from "./icons/StarIcon.astro"
+import Ingredientes from "./Ingredientes.astro"
+import Masa from "./Masa.astro"
 
 const Imagenes = [
     {
@@ -7,13 +9,15 @@ const Imagenes = [
         description: "icono de una pizza"
     },
 ]
+
+const{id}=Astro.props
 ---
 
 <!-- TIPOS -->
 
-<div class="grid grid-cols-3 ml-20 mr-20 mt-10">
+<div id={id} class="grid grid-cols-3 ml-20 mr-20 mt-10">
     <div class="col-span-3 bg-gray-400 rounded border border-[#b3b3b3]">
-        <h1 class="text-center text-3xl mt-2">
+        <h1 class="text-center text-3xl mt-2 font-semibold mb-3">
             PRECIOS A DOMICILIO
         </h1>
         
@@ -170,15 +174,9 @@ const Imagenes = [
                 <h2 class="text-center text-2xl mt-2 col-span-3 font-semibold mb-3">
                     ESCOGE TU MASA
                 </h2>
-                <div class="flex justify-center items-center">
-                    <span class="text-black text-xl">FINA</span>
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="text-black text-xl">NORMAL</span>
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="text-black text-xl">ROLLER</span>
-                </div>
+                <Masa title="FINA"/>
+                <Masa title="NORMAL"/>
+                <Masa title="ROLLER"/>
                 <div>
                     <p class="relative text-red-600 flex justify-center items-center">
                         Bordes crujientes
@@ -208,13 +206,13 @@ const Imagenes = [
     <div class="col-span-3 bg-gray-400 rounded border border-[#b3b3b3]">
         <div class="grid grid-cols-2 mb-5">
             <div class="col-span-2">
-                <h2 class="text-center text-2xl mt-2 font-semibold mb-3">
+                <h2 class="text-center text-3xl mt-2 font-semibold mb-3">
                     ESCOGE TUS INGREDIENTES
                 </h2>
             </div>
             <div>
                 <div class="mr-52 ml-52 h-8 bg-black rounded">
-                    <h2 class="flex justify-center items-center text-white text-xl font-semibold">
+                    <h2 class="flex justify-center items-center text-white text-2xl font-semibold">
                         CLASICOS
                     </h2>
                 </div>
@@ -226,13 +224,21 @@ const Imagenes = [
                     </span>
                 </div>
                 <div>
-                    <h2 class="flex justify-center items-center text-yellow-400 text-xl font-semibold">
+                    <h2 class="flex justify-center items-center text-yellow-400 text-2xl font-semibold">
                         PREMIUM
                     </h2>
                 </div>
             </div>
-            <div class="grid grid-cols-4 gap-x-2">
-
+                <Ingredientes title="SALSAS" ingredientes="Tomate con orégano, barbacoa, carbonara, mejicana"/>
+                <Ingredientes title="SALSAS" ingredientes="Emmy, Ranchera, Burguer, Miel y Mostaza"/>
+                <Ingredientes title="CARNES" ingredientes="Jamon de york, Pollo a la parrilla, Ternera, Pepperoni, Salchichas y Ternera kebab"/>
+                <Ingredientes title="CARNES" ingredientes="Pulled pork, Bacon crispy"/>
+                <Ingredientes title="PESCADOS" ingredientes="Atun y Anchoas"/>
+                <Ingredientes title="" ingredientes=""/>
+                <Ingredientes title="VEGETALES" ingredientes="Champiñon, Piña, Maiz, Tomate natural, Cebolla, Cebolla crujiente, Cebolla caramelizada, Pimiento, Aceitunas negras y Jalapeños"/>
+                <Ingredientes title="" ingredientes=""/>
+                <Ingredientes title="QUESOS" ingredientes="Mozzarela, Queso de cabra y 4 Quesos"/>
+                <Ingredientes title="" ingredientes=""/>
             </div>
         </div>
     </div>
