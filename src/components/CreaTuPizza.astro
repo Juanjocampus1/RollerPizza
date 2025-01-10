@@ -1,9 +1,11 @@
 ---
-const Imagnes = [
+import StarIcon from "./icons/StarIcon.astro"
+
+const Imagenes = [
     {
         imagen: "/images/icons/pizza.png",
         description: "icono de una pizza"
-    }
+    },
 ]
 ---
 
@@ -25,7 +27,7 @@ const Imagnes = [
             <div class="flex justify-center items-center">
                 <div>
                     {
-                        Imagnes.map(({imagen, description}) => (
+                        Imagenes.map(({imagen, description}) => (
                             <span class="flex justify-center items-center w-10 h-10">
                                 <img src={imagen} alt={description}>
                             </span>
@@ -41,7 +43,7 @@ const Imagnes = [
             <div class="flex justify-center items-center">
                 <div>
                     {
-                        Imagnes.map(({imagen, description}) => (
+                        Imagenes.map(({imagen, description}) => (
                             <span class="flex justify-center items-center w-10 h-10 gap-x-2">
                                 <img src={imagen} alt={description}>
                                 <img src={imagen} alt={description}>
@@ -58,7 +60,7 @@ const Imagnes = [
             <div class="flex justify-center items-center">
                 <div>
                     {
-                        Imagnes.map(({imagen, description}) => (
+                        Imagenes.map(({imagen, description}) => (
                             <span class="flex justify-center items-center w-10 h-10 gap-x-2">
                                 <img src={imagen} alt={description}>
                                 <img src={imagen} alt={description}>
@@ -76,7 +78,7 @@ const Imagnes = [
             <div class="flex justify-center items-center">
                 <div>
                     {
-                        Imagnes.map(({imagen, description}) => (
+                        Imagenes.map(({imagen, description}) => (
                             <span class="flex justify-center items-center w-10 h-10">
                                 <img src={imagen} alt={description}>
                             </span>
@@ -92,7 +94,7 @@ const Imagnes = [
             <div class="flex justify-center items-center">
                 <div>
                     {
-                        Imagnes.map(({imagen, description}) => (
+                        Imagenes.map(({imagen, description}) => (
                             <span class="flex justify-center items-center w-10 h-10 gap-x-2">
                                 <img src={imagen} alt={description}>
                                 <img src={imagen} alt={description}>
@@ -109,7 +111,7 @@ const Imagnes = [
             <div class="flex justify-center items-center">
                 <div>
                     {
-                        Imagnes.map(({imagen, description}) => (
+                        Imagenes.map(({imagen, description}) => (
                             <span class="flex justify-center items-center w-10 h-10 gap-x-2">
                                 <img src={imagen} alt={description}>
                                 <img src={imagen} alt={description}>
@@ -117,7 +119,7 @@ const Imagnes = [
                             </span>
                         ))
                     }
-                    <div class="relative flex justify-center items-center">
+                    <div class="relative flex justify-center items-center ">
                         <span class="text-xl text-red-600">
                             38.00€
                         </span>
@@ -136,7 +138,7 @@ const Imagnes = [
         </div>
     </div>
 
-    <!-- TAMAÑO-->
+    <!-- TAMAÑO -->
 
     <div class="col-span-1 bg-gray-400 rounded mt-4 mb-4 mr-2 border border-[#b3b3b3]">
         <div class="flex justify-center items-center mb-4 mt-5">
@@ -151,10 +153,10 @@ const Imagnes = [
                     <span class="text-black text-xl">FAMILIAR</span>
                 </div>
                 <div>
-                    <p class="relative text-red-500 flex justify-center items-center">30cm</p>
+                    <p class="relative text-red-600 flex justify-center items-center">30cm</p>
                 </div>
                 <div>
-                    <p class="relative text-red-500 flex justify-center items-center">40cm</p>
+                    <p class="relative text-red-600 flex justify-center items-center">40cm</p>
                 </div>
             </div>
         </div>
@@ -178,17 +180,17 @@ const Imagnes = [
                     <span class="text-black text-xl">ROLLER</span>
                 </div>
                 <div>
-                    <p class="relative text-red-500 flex justify-center items-center">
+                    <p class="relative text-red-600 flex justify-center items-center">
                         Bordes crujientes
                     </p>
                 </div>
                 <div>
-                    <p class="relative text-red-500 flex justify-center items-center">
+                    <p class="relative text-red-600 flex justify-center items-center">
                         Estilo tradicional
                     </p>
                 </div>
                 <div>
-                    <p class="relative text-red-500 flex justify-center items-center">
+                    <p class="relative text-red-600 flex justify-center items-center">
                         Borde de queso
                     </p>
                 </div>
@@ -200,5 +202,38 @@ const Imagnes = [
                 </p>
         </div>
     </div>
-    <div class="col-span-3 bg-gray-400 rounded border border-[#b3b3b3]">04</div>
+
+    <!-- INGREDIENTES -->
+
+    <div class="col-span-3 bg-gray-400 rounded border border-[#b3b3b3]">
+        <div class="grid grid-cols-2 mb-5">
+            <div class="col-span-2">
+                <h2 class="text-center text-2xl mt-2 font-semibold mb-3">
+                    ESCOGE TUS INGREDIENTES
+                </h2>
+            </div>
+            <div>
+                <div class="mr-52 ml-52 h-8 bg-black rounded">
+                    <h2 class="flex justify-center items-center text-white text-xl font-semibold">
+                        CLASICOS
+                    </h2>
+                </div>
+            </div>
+            <div class="mr-52 ml-52 h-8 bg-black rounded">
+                <div class="ml-11 bg-yellow-400 absolute h-8 w-8 ">
+                    <span>
+                        <StarIcon class="w-72 h-72 mt-1 ml-1"/>
+                    </span>
+                </div>
+                <div>
+                    <h2 class="flex justify-center items-center text-yellow-400 text-xl font-semibold">
+                        PREMIUM
+                    </h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-4 gap-x-2">
+
+            </div>
+        </div>
+    </div>
 </div>
