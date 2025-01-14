@@ -1,0 +1,15 @@
+---
+const { class: className, src } = Astro.props
+---
+
+<div class=`${className}`>    
+    <iframe src={src} 
+        width="600" 
+        height="400" 
+        style="border:0; border-radius: 10px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+    >
+    </iframe>
+</div>

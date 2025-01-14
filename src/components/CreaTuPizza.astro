@@ -2,6 +2,7 @@
 import StarIcon from "./icons/StarIcon.astro"
 import Ingredientes from "./Ingredientes.astro"
 import Masa from "./Masa.astro"
+import TitlesSize from "./TitlesSize.astro"
 
 const Imagenes = [
     {
@@ -22,12 +23,8 @@ const{id}=Astro.props
         </h1>
         
         <div class="grid grid-cols-6 mb-4">
-            <div class="flex justify-center items-center col-span-3">
-                <h2 class="text-2xl font-semibold mb-2">MEDIANAS</h2>
-            </div>
-            <div class="flex justify-center items-center col-span-3">
-                <h2 class="text-2xl font-semibold mb-2">FAMILIARES</h2>
-            </div>
+            <TitlesSize title="MEDIANAS"/>
+            <TitlesSize title="FAMILIARES"/>
             <div class="flex justify-center items-center">
                 <div>
                     {
@@ -229,16 +226,17 @@ const{id}=Astro.props
                     </h2>
                 </div>
             </div>
-                <Ingredientes title="SALSAS" ingredientes="Tomate con orégano, barbacoa, carbonara, mejicana"/>
-                <Ingredientes title="SALSAS" ingredientes="Emmy, Ranchera, Burguer, Miel y Mostaza"/>
-                <Ingredientes title="CARNES" ingredientes="Jamon de york, Pollo a la parrilla, Ternera, Pepperoni, Salchichas y Ternera kebab"/>
-                <Ingredientes title="CARNES" ingredientes="Pulled pork, Bacon crispy"/>
-                <Ingredientes title="PESCADOS" ingredientes="Atun y Anchoas"/>
-                <Ingredientes title="" ingredientes=""/>
-                <Ingredientes title="VEGETALES" ingredientes="Champiñon, Piña, Maiz, Tomate natural, Cebolla, Cebolla crujiente, Cebolla caramelizada, Pimiento, Aceitunas negras y Jalapeños"/>
-                <Ingredientes title="" ingredientes=""/>
-                <Ingredientes title="QUESOS" ingredientes="Mozzarela, Queso de cabra y 4 Quesos"/>
-                <Ingredientes title="" ingredientes=""/>
+                    <Ingredientes title="SALSAS" ingredientes="Tomate con orégano, barbacoa, carbonara, mejicana"/>
+                    <Ingredientes title="SALSAS" ingredientes="Emmy, Ranchera, Burguer, Miel y Mostaza"/>
+                    <Ingredientes title="CARNES" ingredientes="Jamon de york, Pollo a la parrilla, Ternera, Pepperoni, Salchichas y Ternera kebab"/>
+                    <Ingredientes title="CARNES" ingredientes="Pulled pork, Bacon crispy"/>
+                    <Ingredientes title="PESCADOS" ingredientes="Atun y Anchoas"/>
+                    <Ingredientes title="" ingredientes=""/>
+                    <Ingredientes title="VEGETALES" ingredientes="Champiñon, Piña, Maiz, Tomate natural, Cebolla, Cebolla crujiente, Cebolla caramelizada, Pimiento, Aceitunas negras y Jalapeños"/>
+                    <Ingredientes title="" ingredientes=""/>
+                    <Ingredientes title="QUESOS" ingredientes="Mozzarela, Queso de cabra y 4 Quesos"/>
+                    <Ingredientes title="" ingredientes=""/>
+                </div>
             </div>
         </div>
     </div>

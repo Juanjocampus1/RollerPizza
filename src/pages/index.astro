@@ -7,6 +7,7 @@ import Carousel from '../components/Carousel.astro';
 import Titles from '../components/Titles.astro';
 import Buttons from '../components/Buttons.astro';
 import CreaTuPizza from '../components/CreaTuPizza.astro';
+import Localizaciones from '../components/Localizaciones.astro';
 ---
 
 <Layout title='Roller Pizza' description='disfruta de las mejores pizzas de todo madrid'>
@@ -14,7 +15,7 @@ import CreaTuPizza from '../components/CreaTuPizza.astro';
 		<SectionContainer id="top" class="flex gap-64 mt-4 flex-row">
 			<div class="flex justify-start">
 				<img
-					class="w-30 h-12" 
+					class="w-45 h-12" 
 					alt="juanjo foto" 
 					src="/public/images/logo/rojo-negro.png"
 				/>
@@ -24,12 +25,19 @@ import CreaTuPizza from '../components/CreaTuPizza.astro';
 			</div>
 		</SectionContainer>
 		<Carousel class="flex flex-row "/>
-		<SectionContainer class="gap-y-10" >
+		<SectionContainer id="menu" class="gap-y-10" >
 			<Titles title="NUESTRO MENU"/>
 		</SectionContainer>
 		<SectionContainer>
 			<Buttons/>
 		</SectionContainer>
-		<CreaTuPizza id="menu"/>
+		<CreaTuPizza/>
+		<SectionContainer id="timetable" class="gap-y-10" >
+			<Titles title="DONDE ESTAMOS"/>
+		</SectionContainer>
+		<Localizaciones/>
+		<SectionContainer id="timetable" class="gap-y-10" >
+			<Titles title="OPINIONES"/>
+		</SectionContainer>
 	</main>
 </Layout>

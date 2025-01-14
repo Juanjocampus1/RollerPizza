@@ -1,0 +1,9 @@
+---
+const {class: className, title, body } = Astro.props;
+---
+<h1 class="text-xl text-white font-semibold">{title}</h1>
+<p class="text-[#fac564] mt-2">{body}</p>
+<div class=`mt-5 ${className}`>
+    <button class="border border-[#fac564] bg-[#fac564] hover:bg-black text-black hover:text-[#fac564] transition py-2 px-4 rounded">Llamar</button>
+    <button class="border border-gray-400 bg-gray-500 hover:bg-black text-white hover:text-[#fac564] transition py-2 px-4 rounded">Ir</button>
+</div>
