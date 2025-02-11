@@ -1,0 +1,66 @@
+<header class="flex justify-between items-center py-5 w-full max-w-6xl mx-auto px-6 relative">
+    <!-- Logo -->
+    <div class="flex items-center">
+        <img class="w-52 h-18" alt="juanjo foto" src="/public/images/logo/rojo-negro.png" />
+    </div>
+
+    <!-- Menú Desktop -->
+    <nav class="hidden md:flex space-x-6 font-semibold">
+        <a href="#top" class="hover:text-red-500 transition">Inicio</a>
+        <a href="#menu" class="hover:text-red-500 transition">Menú</a>
+        <a href="#timetable" class="hover:text-red-500 transition">Horarios</a>
+        <a href="#location" class="hover:text-red-500 transition">Dónde Estamos</a>
+        <a href="#contact" class="hover:text-red-500 transition">Contacto</a>
+    </nav>
+
+    <!-- Botón Menú (Mobile) -->
+    <button id="menu-toggle" class="md:hidden flex flex-col space-y-1.5 z-50 relative">
+        <span class="w-6 h-0.5 bg-black transition-all"></span>
+        <span class="w-6 h-0.5 bg-black transition-all"></span>
+        <span class="w-6 h-0.5 bg-black transition-all"></span>
+    </button>
+</header>
+
+<!-- Menú Móvil Mejorado -->
+<nav id="mobile-menu" 
+    class="z-10 fixed left-0 w-full h-64 bg-zinc-900 bg-opacity-90 flex flex-col items-center justify-center space-y-6 transform -translate-x-full transition-transform duration-300 md:hidden">
+    <a href="#top" class="text-white text-lg font-semibold hover:text-red-400 transition">Inicio</a>
+    <a href="#menu" class="text-white text-lg font-semibold hover:text-red-400 transition">Menú</a>
+    <a href="#timetable" class="text-white text-lg font-semibold hover:text-red-400 transition">Horarios</a>
+    <a href="#location" class="text-white text-lg font-semibold hover:text-red-400 transition">Dónde Estamos</a>
+    <a href="#contact" class="text-white text-lg font-semibold hover:text-red-400 transition">Contacto</a>
+</nav>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('-translate-x-full'); // Abre/Cierra menú
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu?.classList.add('-translate-x-full');
+        });
+    });
+
+    // Ocultar menú al hacer scroll
+    window.addEventListener('scroll', () => {
+        if (!mobileMenu?.classList.contains('-translate-x-full')) {
+            mobileMenu?.classList.add('-translate-x-full');
+        }
+    });
+
+    // Transición suave al ir a la sección
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href'))?.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>

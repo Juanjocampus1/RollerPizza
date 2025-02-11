@@ -25,11 +25,11 @@ const{id}=Astro.props
         <div class="grid grid-cols-6 mb-4">
             <TitlesSize title="MEDIANAS"/>
             <TitlesSize title="FAMILIARES"/>
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center ml-10">
                 <div>
                     {
                         Imagenes.map(({imagen, description}) => (
-                            <span class="flex justify-center items-center w-10 h-10">
+                            <span class="flex justify-center items-center w-10 h-10 ml-6">
                                 <img src={imagen} alt={description}>
                             </span>
                         ))
