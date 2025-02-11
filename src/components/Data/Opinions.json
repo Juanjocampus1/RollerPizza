@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "opinion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ",
+        "Rate": 5
+    },
+    {
+        "id": 2,
+        "name": "Jane Doe",
+        "opinion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ",
+        "Rate": 4
+    },
+    {
+        "id": 3,
+        "name": "John Doe",
+        "opinion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ",
+        "Rate": 3
+    },
+    {
+        "id": 4,
+        "name": "Jane Doe",
+        "opinion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ",
+        "Rate": 2
+    },
+    {
+        "id": 5,
+        "name": "John Doe",
+        "opinion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ",
+        "Rate": 1
+    }
+]
