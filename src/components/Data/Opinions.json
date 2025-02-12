@@ -1,32 +1,37 @@
 [
     {
-        "id": 1,
-        "name": "John Doe",
-        "opinion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ",
-        "Rate": 5
-    },
-    {
-        "id": 2,
-        "name": "Jane Doe",
-        "opinion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ",
+        "name": "Mariano Gutiérrez",
+        "opinion": "Buena pizza mala para la dieta pero merece la pena saltarse la dieta por esta pizza",
         "Rate": 4
     },
     {
-        "id": 3,
-        "name": "John Doe",
-        "opinion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ",
+        "name": "Juan José",
+        "opinion": "un servicio muy bueno, la comida es excelente y el ambiente es muy agradable",
+        "Rate": 5
+    },
+    {
+        "name": "Sonia García",
+        "opinion": "Una de las mejores pizzas que he probado en mi vida",
+        "Rate": 4
+    },
+    {
+        "name": "Mathiu Olamide",
+        "opinion": "La comida es buena, pero el servicio es muy lento",
         "Rate": 3
     },
     {
-        "id": 4,
-        "name": "Jane Doe",
-        "opinion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ",
-        "Rate": 2
+        "name": "David Serrano",
+        "opinion": "Hola soy el dueño de la pizzeria",
+        "Rate": 4
     },
     {
-        "id": 5,
-        "name": "John Doe",
-        "opinion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ",
-        "Rate": 1
+        "name": "Fernando",
+        "opinion": "La comida es buena y diversa por eso me encanta",
+        "Rate": 4
+    },
+    {
+        "name": "Marta",
+        "opinion": "me han gustado los nuevos mc and cheese",
+        "Rate": 5
     }
 ]

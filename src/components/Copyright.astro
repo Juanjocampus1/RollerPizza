@@ -1,0 +1,7 @@
+<p class="text-center text-white mt-10">&copy; <span id="year"></span> Todos los derechos reservados</p>
+<script>
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear().toString();
+    }
+</script>
