@@ -1,0 +1,57 @@
+---
+import PizzaItem from "./PizzaItem.astro";
+
+const PizzaInfo = [
+    {
+        Name: "JUNIOR´S PIZZA",
+        Ingredients: "Salsa de tomate, mozzarella, jamón, salchichas y extra de queso",
+        Image: "public/Pizzas/junior_s.png",
+        PizzaDescription: "pizza junior",
+        message: "¡La favorita de los más peques!"
+    },
+    {
+        Name: "Pollo a la parrilla",
+        Ingredients: "Salsa de tomate, mozzarella, pollo marinado, champiñones y maiz",
+        Image: "public/Pizzas/pollo_parrilla.png",
+        PizzaDescription: "pizza pollo a la parrilla",
+        message: "¡Una delicia para los amantes del pollo!"
+    },
+    {
+        Name: "Tex Mex",
+        Ingredients: "Salsa mejicana, queso cheddar, nachos, ternera y jalapeños",
+        Image: "public/Pizzas/tex_mex.png",
+        PizzaDescription: "pizza tex mex",
+        message: "¡Para los amantes de la comida mejicana!"
+    },
+    {
+        Name: "De la casa",
+        Ingredients: "Salsa de tomate, mozzarella, bacon, ternera, champiñones y pimiento natural",
+        Image: "public/Pizzas/de_la_casa.png",
+        PizzaDescription: "pizza de la casa",
+        message: "¡La especialidad de la casa!"
+    },
+    {
+        Name: "4 quesos",
+        Ingredients: "Salsa de tomate, mozzarella, bacon, ternera, champiñones y pimiento natural",
+        Image: "public/Pizzas/de_la_casa.png",
+        PizzaDescription: "pizza de la casa",
+        message: "¡La clasica que conoces!"
+    }
+]
+
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mr-3 ml-3">
+    {
+        PizzaInfo.map((pizza) => (
+            <PizzaItem 
+                class="mt-5"
+                Name={pizza.Name} 
+                Ingredients={pizza.Ingredients} 
+                Image={pizza.Image} 
+                PizzaDescription={pizza.PizzaDescription}
+                message={pizza.message}
+            />
+        ))
+    }
+</div>

@@ -1,0 +1,36 @@
+---
+interface Props{
+    Name: string;
+    Ingredients: string;
+    Image: string;
+    PizzaDescription: string;
+    class: string;
+    message: string;
+}
+
+const { 
+    class: className,
+    Name, 
+    Ingredients,
+    Image, 
+    PizzaDescription,
+    message 
+} = Astro.props
+---
+
+<div class={`${className} bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-700`}>
+    <div class="grid grid-cols-3 rounded-t-xl">
+        <div class="col-span-3 flex justify-center items-center py-2 border-b border-gray-700">
+            <h2 class="text-lg text-white font-extrabold uppercase tracking-wide">{Name}</h2>
+        </div>
+        <div class="w-24 h-20 flex items-center p-2">
+            <img src={Image} alt={PizzaDescription} class="rounded-xl shadow-md">
+        </div>
+        <div class="flex items-center px-2 col-span-2">
+            <p class="text-white text-sm font-semibold leading-tight">{Ingredients}</p>
+        </div>
+    </div>
+    <div class="p-2 bg-gray-800 rounded-b-xl text-center border-t border-gray-700">
+        <p class="text-gray-400 text-xs uppercase tracking-wider">{message}</p>
+    </div>
+</div>
