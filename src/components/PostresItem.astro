@@ -1,0 +1,29 @@
+---
+interface Postre {
+    name: string;
+    description: string;
+    image: string;
+    class: string;
+}
+
+const {
+    class: className,
+    name, 
+    description, 
+    image
+} = Astro.props;
+---
+
+<div>
+    <div class={`${className} bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-700 p-3 flex flex-col w-full`}>
+        <h2 class="text-md text-[#fac564] font-extrabold uppercase tracking-wide text-center mb-2">{name}</h2>
+        <div class="flex items-center">
+            <div class="w-24 h-20 flex-shrink-0 bg-gray-800 rounded-lg shadow-md border border-gray-700">
+                <img src={image} alt={description} class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="ml-3 flex-1">
+                <p class="text-gray-300 text-sm font-medium leading-tight">{description}</p>
+            </div>
+        </div>
+    </div>
+</div>
