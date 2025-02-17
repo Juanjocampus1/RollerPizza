@@ -18,19 +18,25 @@ const {
 } = Astro.props
 ---
 
-<div class={`${className} bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-700`}>
-    <div class="grid grid-cols-3 rounded-t-xl">
-        <div class="col-span-3 flex justify-center items-center py-2 border-b border-gray-700">
-            <h2 class="text-lg text-white font-extrabold uppercase tracking-wide">{Name}</h2>
+<div class={`${className} bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-700 p-3 flex flex-col w-full`}>
+    <!-- Nombre de la pizza -->
+    <h2 class="text-md text-[#fac564] font-extrabold uppercase tracking-wide text-center mb-2">{Name}</h2>
+
+    <!-- Contenedor principal -->
+    <div class="flex items-center">
+        <!-- Imagen de la pizza -->
+        <div class="w-24 h-20 flex-shrink-0 bg-gray-800 rounded-lg shadow-md border border-gray-700">
+            <img src={Image} alt={PizzaDescription} class="w-full h-full object-cover rounded-lg">
         </div>
-        <div class="w-24 h-20 flex items-center p-2">
-            <img src={Image} alt={PizzaDescription} class="rounded-xl shadow-md">
-        </div>
-        <div class="flex items-center px-2 col-span-2">
-            <p class="text-white text-sm font-semibold leading-tight">{Ingredients}</p>
+
+        <!-- Ingredientes -->
+        <div class="ml-3 flex-1">
+            <p class="text-gray-300 text-sm font-medium leading-tight">{Ingredients}</p>
         </div>
     </div>
-    <div class="p-2 bg-gray-800 rounded-b-xl text-center border-t border-gray-700">
-        <p class="text-gray-400 text-xs uppercase tracking-wider">{message}</p>
+
+    <!-- Mensaje adicional -->
+    <div class="mt-3 bg-gray-800 text-center py-2 rounded-lg border-t border-gray-700">
+        <p class="text-[#fac564] text-xs uppercase tracking-wider">{message}</p>
     </div>
 </div>
