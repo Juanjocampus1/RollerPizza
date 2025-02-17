@@ -1,18 +1,29 @@
 ---
-const { class: className} = Astro.props
+const { class: className } = Astro.props
 ---
-<div class=`flex flex-col justify-center items-center ${className} text-black`>
-    <h2 class="text-2xl font-semibold text-black mb-8">HORARIOS</h2>
-    <div>
-        <h3 class="text-xl mb-5"> Invierno (Septiembre – Junio)</h3>
-        <p class="text-xl mb-4">Lunes - Jueves</p>
-        <p>13:00 - 16:00</p>
-        <p>18:00 - 23:30</p>
-        <p class="text-xl mb-4">Viernes - Sábado</p>
-        <p>13:00 - 16:00</p>
-        <p>18:00 - 00:00</p>
-        <p class="text-xl mb-4">Domingo - Domingo</p>
-        <p>13:00 - 16:00</p>
-        <p>18:00 - 23:30</p>
+
+<div class={`flex flex-col justify-center items-center ${className}  rounded-2xl p-6 text-gray-900 w-full max-w-lg `}>  
+    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-gray-700 pb-2 w-full text-center uppercase tracking-wide">HORARIOS</h2>
+    
+    <div class="text-center w-full space-y-6">
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Invierno (Septiembre – Junio)</h3>
+        
+        <div class="mb-4 p-4 bg-[#f4c56d] rounded-lg shadow-xl">
+            <p class="text-lg font-bold text-gray-700">Lunes - Jueves</p>
+            <p class="text-gray-800">13:00 - 16:00</p>
+            <p class="text-gray-800">18:00 - 23:30</p>
+        </div>
+
+        <div class="mb-4 p-4 bg-[#f4c56d] rounded-lg shadow-xl">
+            <p class="text-lg font-bold text-gray-700">Viernes - Sábado</p>
+            <p class="text-gray-800">13:00 - 16:00</p>
+            <p class="text-gray-800">18:00 - 00:00</p>
+        </div>
+        
+        <div class="mb-4 p-4 bg-[#f4c56d] rounded-lg shadow-xl">
+            <p class="text-lg font-bold text-gray-700">Domingo</p>
+            <p class="text-gray-800">13:00 - 16:00</p>
+            <p class="text-gray-800">18:00 - 23:30</p>
+        </div>
     </div>
 </div>
