@@ -18,21 +18,28 @@ const{id}=Astro.props
         <div class="w-full flex justify-center">
             <TitleSelectYourPizza title="PRECIOS A DOMICILIO"/>
         </div>
-
-        <!-- Sección de títulos "Medianas" y "Familiares" -->
-        <div class="grid grid-cols-1 md:grid-cols-2 text-center mt-5">
-            <TitleSelectYourPizza title="Medianas"/>
-            <TitleSelectYourPizza title="Familiares"/>
-        </div>
-
-        <!-- Contenedor de pizzas -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-5">
-            <Pizza class="mx-auto" Quantity="1" precio="10,45€"/>
-            <Pizza class="mx-auto" Quantity="2" precio="17,95€"/>
-            <Pizza class="mx-auto" Quantity="3" precio="23,00€"/>
-            <Pizza class="mx-auto" Quantity="1" precio="16,45€"/>
-            <Pizza class="mx-auto" Quantity="2" precio="27,95€"/>
-            <Pizza class="mx-auto" Quantity="3" precio="38,00€"/>
+        <!-- Sección de precios -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
+            <!-- Medianas -->
+            <div class="flex flex-col items-center">
+                <TitleSelectYourPizza title="Medianas"/>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-3">
+                    <Pizza Quantity="1" precio="10,45€"/>
+                    <Pizza Quantity="2" precio="17,95€"/>
+                    <Pizza Quantity="3" precio="23,00€"/>
+                </div>
+            </div>
+            
+            <!-- Familiares -->
+            <div class="flex flex-col items-center">
+                <TitleSelectYourPizza title="Familiares"/>
+                <div class="grid grid-cols-3 gap-4 mt-3">
+                    <Pizza Quantity="1" precio="16,45€"/>
+                    <Pizza Quantity="2" precio="27,95€"/>
+                    <Pizza Quantity="3" precio="38,00€"/>
+                </div>
+            </div>
+            
         </div>
 
         <!-- Textos informativos -->
@@ -47,7 +54,7 @@ const{id}=Astro.props
     </div>
     
     <!-- Sección Tamaño -->
-    <div class="bg-gray-900 rounded-xl p-5 col-span-1 lg:col-span-1">
+    <div class="bg-gray-900 rounded-xl p-5 lg:col-span-1 md:col-span-3 sm:col-span-3">
         <div class="w-full flex justify-center">
             <TitleSelectYourPizza title="ESCOGE EL TAMAÑO"/>
         </div>
@@ -55,7 +62,7 @@ const{id}=Astro.props
     </div>
 
     <!-- Sección Masa -->
-    <div class="bg-gray-900 rounded-xl p-5 col-span-1 lg:col-span-2">
+    <div class="bg-gray-900 rounded-xl p-5 lg:col-span-2 md:col-span-3 sm:col-span-3">
         <div class="w-full flex justify-center">
             <TitleSelectYourPizza title="ESCOGE TU MASA"/>
         </div>
@@ -75,7 +82,7 @@ const{id}=Astro.props
             <TitleSelectYourPizza title="ESCOGE TUS INGREDIENTES"/>
         </div>
         <div class="grid grid-cols-2 gap-4">
-            <div>
+            <div class="lg:col-span-1 md:col-span-2 sm:col-span-2">
                 <ClasicButton/>
                 <Ingredientes title="SALSAS" ingredientes="Tomate con orégano, barbacoa, carbonara, mejicana"/>
                 <Ingredientes title="CARNES" ingredientes="Jamon de york, Pollo a la parrilla, Ternera, Pepperoni, Salchichas y Ternera kebab"/>
@@ -83,7 +90,7 @@ const{id}=Astro.props
                 <Ingredientes title="VEGETALES" ingredientes="Champiñon, Piña, Maiz, Tomate natural, Cebolla, Cebolla crujiente, Cebolla caramelizada, Pimiento, Aceitunas negras y Jalapeños"/>
                 <Ingredientes title="QUESOS" ingredientes="Mozzarela, Queso de cabra y 4 Quesos"/>
             </div>
-            <div>
+            <div class="lg:col-span-1 md:col-span-2 sm:col-span-2">
                 <PremiunButton/>
                 <Ingredientes title="SALSAS" ingredientes="Emmy, Ranchera, Burguer, Miel y Mostaza"/>
                 <Ingredientes title="CARNES" ingredientes="Pulled pork, Bacon crispy"/>

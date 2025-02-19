@@ -9,19 +9,24 @@ const Imagenes = [
 const { class: ClassName, Quantity, precio } = Astro.props
 ---
 
-<div class={`${ClassName} rounded-lg border-t border-gray-700 bg-gray-800 mx-auto my-auto inline-flex flex-col items-center p-2`} style={`width: ${Quantity * 5}rem;`}>
+<div class={`${ClassName} rounded-lg border-t border-gray-700 bg-gray-800 mx-auto my-auto inline-flex flex-col items-center p-2`} 
+    style={`width: ${Quantity * 5}rem; max-width: 100%;`}>
+    
     <div class="flex flex-row gap-x-2 justify-center items-center">
-        {
-            Array.from({ length: Quantity }).map((_, index) => (
-                Imagenes.map((imagen) => (
-                    <span class="m-2">
-                        <img src={imagen.imagen} alt={imagen.description} class="w-12 h-12 flex-shrink-0 mx-auto invert"/>
-                    </span>
-                ))
+        {Array.from({ length: Quantity }).map(() => (
+            Imagenes.map((imagen) => (
+                <span class="m-2">
+                    <img 
+                        src={imagen.imagen} 
+                        alt={imagen.description} 
+                        class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex-shrink-0 mx-auto invert transition-all duration-300"
+                    />
+                </span>
             ))
-        }
+        ))}
     </div> 
-    <h2 class="text-center text-[#fac564] text-xl font-semibold pt-2">
+
+    <h2 class="text-center text-[#fac564] text-lg sm:text-xl font-semibold pt-2">
         {precio}
     </h2>
 </div>
