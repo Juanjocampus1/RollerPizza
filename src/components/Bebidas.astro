@@ -1,0 +1,65 @@
+---
+import {Refrescos, Botellas, CervezaTinto, Barril} from "./Utils/Bebidas";
+import BebidasItem from "./BebidasItem.astro";
+import TitleSelectYourPizza from "./TitleSelectYourPizza.astro"
+
+---
+<TitleSelectYourPizza class="text-[#000000] mt-12" title="REFRESCOS"/>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto max-w-7xl">
+    {
+        Refrescos.map((pizza) => (
+            <BebidasItem 
+                class="mt-5"
+                tamaño={pizza.tamaño} 
+                nombre={pizza.nombre} 
+                imagen={pizza.imagen} 
+                descripcion={pizza.descripcion}
+            />
+        ))
+    }
+</div>
+
+<TitleSelectYourPizza class="text-[#000000] mt-12" title="BOTELLAS"/>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto max-w-7xl">
+    {
+        Botellas.map((pizza) => (
+            <BebidasItem 
+                class="mt-5"
+                tamaño={pizza.tamaño} 
+                nombre={pizza.nombre} 
+                imagen={pizza.imagen} 
+                descripcion={pizza.descripcion}
+            />
+        ))
+    }
+</div>
+
+<TitleSelectYourPizza class="text-[#000000] mt-12" title="CERVEZA Y TINTO"/>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto max-w-7xl">
+    {
+        CervezaTinto.map((pizza) => (
+            <BebidasItem 
+                class="mt-5"
+                tamaño={pizza.tamaño} 
+                nombre={pizza.nombre} 
+                imagen={pizza.imagen} 
+                descripcion={pizza.descripcion}
+            />
+        ))
+    }
+</div>
+
+<TitleSelectYourPizza class="text-[#000000] mt-12" title="BARRIL"/>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto max-w-7xl">
+    {
+        Barril.map((pizza) => (
+            <BebidasItem 
+                class="mt-5"
+                tamaño={pizza.tamaño} 
+                nombre={pizza.nombre} 
+                imagen={pizza.imagen} 
+                descripcion={pizza.descripcion}
+            />
+        ))
+    }
+</div>
