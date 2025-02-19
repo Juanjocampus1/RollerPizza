@@ -1,14 +1,14 @@
 <div class="mt-16 flex justify-center space-x-4">
-    <button class="border border-[#fac564] bg-[#fac564] hover:bg-white text-black  hover:text-[#fac564] transition py-2 px-4 rounded">
+    <button id="btnCreaTuPizza" class="border border-[#fac564] bg-[#fac564] hover:bg-white text-black hover:text-[#fac564] transition py-2 px-4 rounded">
         Haz tu Pizza
     </button>
-    <button class="border border-[#fac564] bg-[#fac564] hover:bg-white text-black  hover:text-[#fac564] transition py-2 px-4 rounded">
+    <button id="btnEspecialidades" class="border border-[#fac564] bg-[#fac564] hover:bg-white text-black hover:text-[#fac564] transition py-2 px-4 rounded">
         Pizza
     </button>
-    <button class="border border-[#fac564] bg-[#fac564] hover:bg-white text-black  hover:text-[#fac564] transition py-2 px-4 rounded">
+    <button id="btnEntrantesPostres" class="border border-[#fac564] bg-[#fac564] hover:bg-white text-black hover:text-[#fac564] transition py-2 px-4 rounded">
         Entrantes y Postres
     </button>
-    <button class="border border-[#fac564] bg-[#fac564] hover:bg-white text-black  hover:text-[#fac564] transition py-2 px-4 rounded">
+    <button id="btnBebidas" class="border border-[#fac564] bg-[#fac564] hover:bg-white text-black hover:text-[#fac564] transition py-2 px-4 rounded">
         Bebidas
     </button>
 </div>
@@ -18,3 +18,43 @@
         El listado completo de alergenos está disponible pinchando aquí
     </div>
 </a>
+
+<script>
+    function showSection(sectionId?: string) {
+        const sections = ['creaTuPizza', 'especialidades', 'entrantesPostres', 'bebidas'];
+        sections.forEach(id => {
+            const section = document.getElementById(id);
+            if (section) {
+                if (id === sectionId) {
+                    section.classList.remove('hidden');
+                    section.classList.add('fade-in');
+                } else {
+                    section.classList.remove('fade-in');
+                    section.classList.add('hidden');
+                }
+            }
+        });
+    }
+
+    document.getElementById('btnCreaTuPizza')?.addEventListener('click', () => showSection('creaTuPizza'));
+    document.getElementById('btnEspecialidades')?.addEventListener('click', () => showSection('especialidades'));
+    document.getElementById('btnEntrantesPostres')?.addEventListener('click', () => showSection('entrantesPostres'));
+    document.getElementById('btnBebidas')?.addEventListener('click', () => showSection('bebidas'));
+</script>
+
+<style>
+    .hidden {
+        display: none;
+    }
+    .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>

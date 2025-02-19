@@ -13,31 +13,42 @@ import Especialidades from '../components/Especialidades.astro';
 import EntrantesPostres from '../components/EntrantesPostres.astro';
 import CreaTuPizza from '../components/CreaTuPizza.astro';
 import Bebidas from '../components/Bebidas.astro';
-
 ---
 
 <Layout title='Roller Pizza' description='disfruta de las mejores pizzas de todo madrid'>
-	<Navbar class="z-20"/>
-	<main>
-		<Carousel class="flex flex-row "/>
-		<SectionContainer id="menu" class="gap-y-20" >
-			<Titles title="NUESTRO MENU"/>
-		</SectionContainer>
-		<SectionContainer>
-			<Buttons/>
-		</SectionContainer>
-			<!-- <CreaTuPizza/> -->
-			<!-- <Especialidades/>  -->
-			<!-- <EntrantesPostres/> -->
+    <Navbar class="z-20"/>
+    <main>
+        <Carousel class="flex flex-row "/>
+        <SectionContainer id="menu" class="gap-y-20" >
+            <Titles title="NUESTRO MENU"/>
+        </SectionContainer>
+        <SectionContainer>
+            <Buttons/>
+        </SectionContainer>
+        
+		<div id="creaTuPizza" class="animate-fadeInDrop">
+			<CreaTuPizza/>
+		</div>
+		<div id="especialidades" class="hidden animate-fadeInDrop">
+			<Especialidades/>
+		</div>
+		<div id="entrantesPostres" class="hidden animate-fadeInDrop">
+			<EntrantesPostres/>
+		</div>
+		<div id="bebidas" class="hidden animate-fadeInDrop">
 			<Bebidas/>
-		<SectionContainer id="timetable" class="gap-y-20" >
-			<Titles title="DONDE ESTAMOS"/>
-		</SectionContainer>
-		<Localizaciones/>
-		<SectionContainer id="timetable" class="gap-y-20" >
-			<Titles title="OPINIONES"/>
-			<Opinions/>
-		</SectionContainer>
-	</main>
-	<Footer/>
+		</div>
+		
+        
+        <SectionContainer id="timetable" class="gap-y-20" >
+            <Titles title="DONDE ESTAMOS"/>
+        </SectionContainer>
+        <Localizaciones/>
+        <SectionContainer id="timetable" class="gap-y-20" >
+            <Titles title="OPINIONES"/>
+            <Opinions/>
+        </SectionContainer>
+    </main>
+    <Footer/>
 </Layout>
+

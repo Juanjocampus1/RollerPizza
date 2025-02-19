@@ -96,6 +96,7 @@ export const CervezaTinto = [
         descripcion: "Tinto de verano"
     }
 ];
+
 export const Barril = [
     {
         nombre: "Estrella Dam",
