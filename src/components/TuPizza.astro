@@ -1,0 +1,66 @@
+---
+import Pizza from "./Pizza.astro"
+import TitleSelectYourPizza from "./TitleSelectYourPizza.astro"
+
+
+const{id}=Astro.props
+---
+
+<div id={id} class="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-5 md:mx-20 mt-10">
+    <!-- Contenedor principal -->
+    <div class="col-span-3 bg-gray-900 rounded-xl p-5">
+        <div class="w-full flex justify-center">
+            <TitleSelectYourPizza title="PRECIOS A DOMICILIO"/>
+        </div>
+
+        <!-- Sección de títulos "Medianas" y "Familiares" -->
+        <div class="grid grid-cols-1 md:grid-cols-2 text-center mt-5">
+            <TitleSelectYourPizza title="Medianas"/>
+            <TitleSelectYourPizza title="Familiares"/>
+        </div>
+
+        <!-- Contenedor de pizzas -->
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-4 mt-5">
+            <Pizza class="mx-auto" Quantity="1" precio="10,45€"/>
+            <Pizza class="mx-auto" Quantity="2" precio="10,45€"/>
+            <Pizza class="mx-auto" Quantity="3" precio="10,45€"/>
+
+            <Pizza class="mx-auto" Quantity="1" precio="10,45€"/>
+            <Pizza class="mx-auto" Quantity="2" precio="10,45€"/>
+            <Pizza class="mx-auto" Quantity="3" precio="10,45€"/>
+        </div>
+        <div class="grid grid-cols-2">
+            <div>
+                <h2 class="text-center text-[#fac564] text-md font-semibold pt-2">
+                    Realizamos reparto a domicilio en Humanes y Moraleja de Enmedio con un suplemento de 3€ por pedido.
+                </h2>
+            </div>
+            <div>
+                <h2 class="text-center text-[#fac564] text-md font-semibold pt-2">
+                    Realizar estos pedidos en nuestra tienda de Fuenlabrada 2.                </h2>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sección Tamaño -->
+    <div class="bg-gray-900 rounded-xl p-5">
+        <div class="w-full flex justify-center">
+            <TitleSelectYourPizza title="ESCOGE EL TAMAÑO"/>
+        </div>
+    </div>
+
+    <!-- Sección Masa -->
+    <div class="col-span-2 bg-gray-900 rounded-xl p-5">
+        <div class="w-full flex justify-center">
+            <TitleSelectYourPizza title="ESCOGE TU MASA"/>
+        </div>
+    </div>
+
+    <!-- Sección Ingredientes -->
+    <div class="col-span-3 bg-gray-900 rounded-xl p-5">
+        <div class="w-full flex justify-center">
+            <TitleSelectYourPizza title="ESCOGE TUS INGREDIENTES"/>
+        </div>
+    </div>
+</div>
+
