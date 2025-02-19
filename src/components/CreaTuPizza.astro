@@ -1,242 +1,92 @@
 ---
-import StarIcon from "./icons/StarIcon.astro"
+import MasaSize from "./MasaSize.astro"
+import Pizza from "./Pizza.astro"
+import TitleSelectYourPizza from "./TitleSelectYourPizza.astro"
+import ChooseYourMass from "./ChooseYourMass.astro"
+import ClasicButton from "./ClasicButton.astro"
+import PremiunButton from "./PremiunButton.astro"
 import Ingredientes from "./Ingredientes.astro"
-import Masa from "./Masa.astro"
-import TitlesSize from "./TitlesSize.astro"
 
-const Imagenes = [
-    {
-        imagen: "/images/icons/pizza.png",
-        description: "icono de una pizza"
-    },
-]
+
 
 const{id}=Astro.props
 ---
 
-<!-- TIPOS -->
-
-<div id={id} class="grid grid-cols-3 ml-20 mr-20 mt-10">
-    <div class="col-span-3 bg-gray-500 rounded border border-[#b3b3b3]">
-        <h1 class="text-center text-3xl mt-2 font-semibold mb-3">
-            PRECIOS A DOMICILIO
-        </h1>
-        
-        <div class="grid grid-cols-6 mb-4">
-            <TitlesSize title="MEDIANAS"/>
-            <TitlesSize title="FAMILIARES"/>
-            <div class="flex justify-center items-center ml-10">
-                <div>
-                    {
-                        Imagenes.map(({imagen, description}) => (
-                            <span class="flex justify-center items-center w-10 h-10 ml-6">
-                                <img src={imagen} alt={description}>
-                            </span>
-                        ))
-                    }
-                    <div class="relative flex justify-center items-center">
-                        <span class="text-xl text-red-600">
-                            10,45€
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex justify-center items-center">
-                <div>
-                    {
-                        Imagenes.map(({imagen, description}) => (
-                            <span class="flex justify-center items-center w-10 h-10 gap-x-2">
-                                <img src={imagen} alt={description}>
-                                <img src={imagen} alt={description}>
-                            </span>
-                        ))
-                    }
-                <div class="relative flex justify-center items-center">
-                        <span class="text-xl text-red-600">
-                            17,95€
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex justify-center items-center">
-                <div>
-                    {
-                        Imagenes.map(({imagen, description}) => (
-                            <span class="flex justify-center items-center w-10 h-10 gap-x-2">
-                                <img src={imagen} alt={description}>
-                                <img src={imagen} alt={description}>
-                                <img src={imagen} alt={description}>
-                            </span>
-                        ))
-                    }
-                    <div class="relative flex justify-center items-center">
-                        <span class="text-xl text-red-600">
-                            23.00€
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex justify-center items-center">
-                <div>
-                    {
-                        Imagenes.map(({imagen, description}) => (
-                            <span class="flex justify-center items-center w-10 h-10">
-                                <img src={imagen} alt={description}>
-                            </span>
-                        ))
-                    }
-                    <div class="relative flex justify-center items-center">
-                        <span class="text-xl text-red-600">
-                            16.45€
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex justify-center items-center">
-                <div>
-                    {
-                        Imagenes.map(({imagen, description}) => (
-                            <span class="flex justify-center items-center w-10 h-10 gap-x-2">
-                                <img src={imagen} alt={description}>
-                                <img src={imagen} alt={description}>
-                            </span>
-                        ))
-                    }
-                    <div class="relative flex justify-center items-center">
-                        <span class="text-xl text-red-600">
-                            27.95€
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex justify-center items-center">
-                <div>
-                    {
-                        Imagenes.map(({imagen, description}) => (
-                            <span class="flex justify-center items-center w-10 h-10 gap-x-2">
-                                <img src={imagen} alt={description}>
-                                <img src={imagen} alt={description}>
-                                <img src={imagen} alt={description}>
-                            </span>
-                        ))
-                    }
-                    <div class="relative flex justify-center items-center ">
-                        <span class="text-xl text-red-600">
-                            38.00€
-                        </span>
-                    </div>
-                </div>
-            </div>
-            
+<div id={id} class="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-5 md:mx-20 mt-10">
+    <!-- Contenedor principal -->
+    <div class="col-span-3 bg-gray-900 rounded-xl p-5">
+        <div class="w-full flex justify-center">
+            <TitleSelectYourPizza title="PRECIOS A DOMICILIO"/>
         </div>
-        <div class="grid grid-cols-2">
-            <div class="flex justify-center items-center">
-                <p>Realizamos reparto a domicilio en Humanes y Moraleja de Enmedio con un suplemento de 3€ por pedido. </p>
-            </div>
-            <div class="flex justify-center items-center">
-                <p>Realizar estos pedidos en nuestra tienda de Fuenlabrada 2.</p>
-            </div>  
+
+        <!-- Sección de títulos "Medianas" y "Familiares" -->
+        <div class="grid grid-cols-1 md:grid-cols-2 text-center mt-5">
+            <TitleSelectYourPizza title="Medianas"/>
+            <TitleSelectYourPizza title="Familiares"/>
+        </div>
+
+        <!-- Contenedor de pizzas -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-5">
+            <Pizza class="mx-auto" Quantity="1" precio="10,45€"/>
+            <Pizza class="mx-auto" Quantity="2" precio="17,95€"/>
+            <Pizza class="mx-auto" Quantity="3" precio="23,00€"/>
+            <Pizza class="mx-auto" Quantity="1" precio="16,45€"/>
+            <Pizza class="mx-auto" Quantity="2" precio="27,95€"/>
+            <Pizza class="mx-auto" Quantity="3" precio="38,00€"/>
+        </div>
+
+        <!-- Textos informativos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <h2 class="text-center text-white text-md font-semibold">
+                Realizamos reparto a domicilio en Humanes y Moraleja de Enmedio con un suplemento de 3€ por pedido.
+            </h2>
+            <h2 class="text-center text-white text-md font-semibold">
+                Realizar estos pedidos en nuestra tienda de Fuenlabrada 2.
+            </h2>
         </div>
     </div>
-
-    <!-- TAMAÑO -->
-
-    <div class="col-span-1 bg-gray-500 rounded mt-4 mb-4 mr-2 border border-[#b3b3b3]">
-        <div class="flex justify-center items-center mb-4 mt-5">
-            <div class="grid grid-cols-2 gap-x-20">
-                <h2 class="text-center text-2xl mt-2 col-span-2 font-semibold mb-3">
-                    ESCOGE EL TAMAÑO
-                </h2>
-                <div class="flex justify-center items-center">
-                    <span class="text-black text-xl">MEDIANA</span>
-                </div>
-                <div class="flex justify-center items-center">
-                    <span class="text-black text-xl">FAMILIAR</span>
-                </div>
-                <div>
-                    <p class="relative text-red-600 flex justify-center items-center">30cm</p>
-                </div>
-                <div>
-                    <p class="relative text-red-600 flex justify-center items-center">40cm</p>
-                </div>
-            </div>
+    
+    <!-- Sección Tamaño -->
+    <div class="bg-gray-900 rounded-xl p-5 col-span-1 lg:col-span-1">
+        <div class="w-full flex justify-center">
+            <TitleSelectYourPizza title="ESCOGE EL TAMAÑO"/>
         </div>
+        <MasaSize/>
     </div>
 
-    <!-- MASA -->
-
-    <div class="col-span-2 bg-gray-500 rounded mt-4 mb-4 ml-2 border border-[#b3b3b3]">
-        <div class="flex justify-center items-center mb-4 mt-2">
-            <div class="grid grid-cols-3 gap-x-20">
-                <h2 class="text-center text-2xl mt-2 col-span-3 font-semibold mb-3">
-                    ESCOGE TU MASA
-                </h2>
-                <Masa title="FINA"/>
-                <Masa title="NORMAL"/>
-                <Masa title="ROLLER"/>
-                <div>
-                    <p class="relative text-red-600 flex justify-center items-center">
-                        Bordes crujientes
-                    </p>
-                </div>
-                <div>
-                    <p class="relative text-red-600 flex justify-center items-center">
-                        Estilo tradicional
-                    </p>
-                </div>
-                <div>
-                    <p class="relative text-red-600 flex justify-center items-center">
-                        Borde de queso
-                    </p>
-                </div>
-            </div>
+    <!-- Sección Masa -->
+    <div class="bg-gray-900 rounded-xl p-5 col-span-1 lg:col-span-2">
+        <div class="w-full flex justify-center">
+            <TitleSelectYourPizza title="ESCOGE TU MASA"/>
         </div>
-        <div class="col-span-3 bg-black border-b border-r border-l border-[#b3b3b3]">
-            <p class="text-center text-white">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <ChooseYourMass/>
+        </div>
+        <div class="mt-4 -mb-3 rounded-lg border-t border-gray-700 bg-gray-800 mx-auto">
+            <h2 class="text-center text-[#ffffff] text-md font-semibold">
                 Masa Rollers: Mediana +1,5€ | Familiar +2€
-                </p>
+            </h2>
         </div>
     </div>
 
-    <!-- INGREDIENTES -->
-
-    <div class="col-span-3 bg-gray-500 rounded border border-[#b3b3b3]">
-        <div class="grid grid-cols-2 mb-5">
-            <div class="col-span-2">
-                <h2 class="text-center text-3xl mt-2 font-semibold mb-3">
-                    ESCOGE TUS INGREDIENTES
-                </h2>
+    <!-- Sección Ingredientes -->
+    <div class="col-span-3 bg-gray-900 rounded-xl p-5">
+        <div class="w-full flex justify-center">
+            <TitleSelectYourPizza title="ESCOGE TUS INGREDIENTES"/>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <ClasicButton/>
+                <Ingredientes title="SALSAS" ingredientes="Tomate con orégano, barbacoa, carbonara, mejicana"/>
+                <Ingredientes title="CARNES" ingredientes="Jamon de york, Pollo a la parrilla, Ternera, Pepperoni, Salchichas y Ternera kebab"/>
+                <Ingredientes title="PESCADOS" ingredientes="Atun y Anchoas"/>
+                <Ingredientes title="VEGETALES" ingredientes="Champiñon, Piña, Maiz, Tomate natural, Cebolla, Cebolla crujiente, Cebolla caramelizada, Pimiento, Aceitunas negras y Jalapeños"/>
+                <Ingredientes title="QUESOS" ingredientes="Mozzarela, Queso de cabra y 4 Quesos"/>
             </div>
             <div>
-                <div class="mr-52 ml-52 h-8 bg-black rounded">
-                    <h2 class="flex justify-center items-center text-white text-2xl font-semibold">
-                        CLASICOS
-                    </h2>
-                </div>
-            </div>
-            <div class="mr-52 ml-52 h-8 bg-black rounded">
-                <div class="ml-11 bg-yellow-400 absolute h-8 w-8 ">
-                    <span>
-                        <StarIcon class="w-72 h-72 mt-1 ml-1"/>
-                    </span>
-                </div>
-                <div>
-                    <h2 class="flex justify-center items-center text-yellow-400 text-2xl font-semibold">
-                        PREMIUM
-                    </h2>
-                </div>
-            </div>
-                    <Ingredientes title="SALSAS" ingredientes="Tomate con orégano, barbacoa, carbonara, mejicana"/>
-                    <Ingredientes title="SALSAS" ingredientes="Emmy, Ranchera, Burguer, Miel y Mostaza"/>
-                    <Ingredientes title="CARNES" ingredientes="Jamon de york, Pollo a la parrilla, Ternera, Pepperoni, Salchichas y Ternera kebab"/>
-                    <Ingredientes title="CARNES" ingredientes="Pulled pork, Bacon crispy"/>
-                    <Ingredientes title="PESCADOS" ingredientes="Atun y Anchoas"/>
-                    <Ingredientes title="" ingredientes=""/>
-                    <Ingredientes title="VEGETALES" ingredientes="Champiñon, Piña, Maiz, Tomate natural, Cebolla, Cebolla crujiente, Cebolla caramelizada, Pimiento, Aceitunas negras y Jalapeños"/>
-                    <Ingredientes title="" ingredientes=""/>
-                    <Ingredientes title="QUESOS" ingredientes="Mozzarela, Queso de cabra y 4 Quesos"/>
-                    <Ingredientes title="" ingredientes=""/>
-                </div>
+                <PremiunButton/>
+                <Ingredientes title="SALSAS" ingredientes="Emmy, Ranchera, Burguer, Miel y Mostaza"/>
+                <Ingredientes title="CARNES" ingredientes="Pulled pork, Bacon crispy"/>
             </div>
         </div>
     </div>
