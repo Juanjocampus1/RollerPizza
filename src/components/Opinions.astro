@@ -3,7 +3,7 @@ import json from '../components/Data/Opinions.json';
 ---
 
 <section class="mt-5">
-    <div class="flex animate-opinions-slide">
+    <div class="flex animate-opinions-slide lazy">
         {
             json.map(({ name, opinion, Rate }) => (
                 <div class="bg-white rounded-lg shadow-md p-4 min-w-[300px] mx-2">
@@ -33,4 +33,39 @@ import json from '../components/Data/Opinions.json';
 .animate-opinions-slide {
     animation: opinions-slide 40s linear infinite;
 }
+
+.lazy {
+    opacity: 0;
+    transition: opacity 1.0s;
+}
+
+.lazy-loaded {
+    opacity: 1;
+}
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const lazyElements = document.querySelectorAll('.lazy');
+
+    if ('IntersectionObserver' in window) {
+        const lazyObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('lazy-loaded');
+                    lazyObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        lazyElements.forEach(element => {
+            lazyObserver.observe(element);
+        });
+    } else {
+        // Fallback for browsers that do not support IntersectionObserver
+        lazyElements.forEach(element => {
+            element.classList.add('lazy-loaded');
+        });
+    }
+});
+</script>
