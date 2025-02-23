@@ -79,35 +79,35 @@ export const PizzaClasica = [
     {
         Name: "Donner pizza",
         Ingredients: "Salsa de kebab, mozzarella, tomate natural y pollo kebab",
-        Image: "public/Pizzas/images/pollo_parrilla.webp",
+        Image: "public/Pizzas/images/kebab-diagonal.webp",
         PizzaDescription: "Donner pizza",
         message: "¡Lo que triunfa en turquia!"
     },
     {
         Name: "Mediterranea",
         Ingredients: "Salsa de tomate, mozzarella, atun, tomate natural y aceitunas negras",
-        Image: "public/Pizzas/images/pollo_parrilla.webp",
+        Image: "public/Pizzas/images/mediterranea-diagonal.webp",
         PizzaDescription: "pizza Mediterranea",
         message: "¡lo mejor del mediterraneo!"
     },
     {
         Name: "Ideal",
         Ingredients: "Salsa de tomate, mozzarella, jamon de york, chmapiñones y tomate natural",
-        Image: "public/Pizzas/images/pollo_parrilla.webp",
+        Image: "public/Pizzas/images/ideal-diagonal.webp",
         PizzaDescription: "pizza Ideal",
         message: "¡El nombre lo dice todo!"
     },
     {
         Name: "Barbacoa",
         Ingredients: "Salsa barbacoa, mozzarella, bacon, ternera y cebolla natural o maiz",
-        Image: "public/Pizzas/images/pollo_parrilla.webp",
+        Image: "public/Pizzas/images/bbq-web.webp",
         PizzaDescription: "pizza barbacoa",
         message: "¡Lo mas americano!"
     },
     {
         Name: "Sweet pepperoni",
         Ingredients: "Salsa bbq/salsa tomate, mozzarella, pepperoni, topping de miel",
-        Image: "public/Pizzas/images/pollo_parrilla.webp",
+        Image: "public/Pizzas/images/sweet-peperoni.webp",
         PizzaDescription: "pizza Sweet pepperoni",
         message: "¡El toque dulce que te sorprendera!"
     }
@@ -117,14 +117,14 @@ export const PizzaPremiun = [
     {
         Name: "Hot chicken",
         Ingredients: "Salsa barbacoa, mozzarella, pepperoni, pollo marinado y ternera",
-        Image: "public/Pizzas/images/pollo_parrilla.webp",
+        Image: "public/Pizzas/images/hot-chicken-artistica-buena.webp",
         PizzaDescription: "pizza hot chicken",
         message: "¡el toque marinado que te sorprendera!"
     },
     {
         Name: "Cremosa Miel y Mostaza",
         Ingredients: "Salsa carbonara, queso cheddar, ternera, pollo marinado y topping de miel y mostaza",
-        Image: "public/Pizzas/images/pollo_parrilla.webp",
+        Image: "public/Pizzas/images/cremosa-bbq-diagonal.webp",
         PizzaDescription: "pizza Cremosa Miel y Mostaza",
         message: "¡el dulce y el salado en una pizza!"
     },
