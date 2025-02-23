@@ -131,21 +131,21 @@ export const PizzaPremiun = [
     {
         Name: "Pizza burguer",
         Ingredients: "Salsa burguer, queso cheddar, bacon y ternera",
-        Image: "public/Pizzas/images/pollo_parrilla.webp",
+        Image: "public/Pizzas/images/burguer.webp",
         PizzaDescription: "pizza burguer",
         message: "¡el sabor de la burguer en una pizza!"
     },
     {
         Name: "Pulled pork",
         Ingredients: "Salsa ranchera, mozzarella, pulled pork, y cebolla caramelizada",
-        Image: "public/Pizzas/images/pollo_parrilla.webp",
+        Image: "public/Pizzas/images/pulled-pork.webp",
         PizzaDescription: "pizza Pulled pork",
         message: "¡la carne mas tierna en una pizza!"
     },
     {
         Name: "Emmy´s pizza",
         Ingredients: "Salsa emmy, mozzarella, cebolla, bacon y ternera",
-        Image: "public/Pizzas/images/pollo_parrilla.webp",
+        Image: "public/Pizzas/images/emmys.webp",
         PizzaDescription: "pizza Emmy´s",
         message: "¡lo mejor de la casa!"
     }
