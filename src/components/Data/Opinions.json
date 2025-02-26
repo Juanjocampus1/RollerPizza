@@ -1,37 +1,77 @@
 [
     {
-        "name": "Mariano Gutiérrez",
-        "opinion": "Buena pizza mala para la dieta pero merece la pena saltarse la dieta por esta pizza",
+        "name": "Lucía Fernández",
+        "opinion": "Las pizzas son muy buenas, aunque me gustaría que tuvieran más opciones sin gluten.",
         "Rate": 4
     },
     {
-        "name": "Juan José",
-        "opinion": "un servicio muy bueno, la comida es excelente y el ambiente es muy agradable",
+        "name": "Carlos Ramírez",
+        "opinion": "El ambiente es increíble y la atención al cliente es de primera. Volveré sin duda.",
         "Rate": 5
     },
     {
-        "name": "Sonia García",
-        "opinion": "Una de las mejores pizzas que he probado en mi vida",
-        "Rate": 4
-    },
-    {
-        "name": "Mathiu Olamide",
-        "opinion": "La comida es buena, pero el servicio es muy lento",
+        "name": "Andrea López",
+        "opinion": "La pizza es deliciosa, pero el tiempo de espera fue un poco largo. Aun así, vale la pena.",
         "Rate": 3
     },
     {
-        "name": "David Serrano",
-        "opinion": "Hola soy el dueño de la pizzeria",
-        "Rate": 4
+        "name": "Javier Gómez",
+        "opinion": "Un sitio perfecto para disfrutar de una buena cena con amigos. La comida es espectacular.",
+        "Rate": 5
     },
     {
-        "name": "Fernando",
-        "opinion": "La comida es buena y diversa por eso me encanta",
-        "Rate": 4
+        "name": "Beatriz Herrera",
+        "opinion": "Me encantó la variedad de sabores y la calidad de los ingredientes. Todo riquísimo.",
+        "Rate": 5
     },
     {
-        "name": "Marta",
-        "opinion": "me han gustado los nuevos mc and cheese",
+        "name": "Roberto Díaz",
+        "opinion": "Pedí a domicilio y llegó rápido, caliente y deliciosa. Muy recomendable.",
+        "Rate": 5
+    },
+    {
+        "name": "Sara Méndez",
+        "opinion": "Nunca había probado una pizza tan buena. ¡Definitivamente regresaré pronto!",
+        "Rate": 5
+    },
+    {
+        "name": "Francisco Ruiz",
+        "opinion": "El queso es de primera calidad y el sabor es inigualable. Totalmente recomendado.",
+        "Rate": 5
+    },
+    {
+        "name": "Natalia Suárez",
+        "opinion": "Un restaurante acogedor, excelente comida y precios muy razonables. ¡Me encanta!",
+        "Rate": 5
+    },
+    {
+        "name": "Alejandro Castro",
+        "opinion": "Las salsas caseras son una maravilla, aunque podrían mejorar un poco el tamaño de las porciones.",
+        "Rate": 3
+    },
+    {
+        "name": "Claudia Moreno",
+        "opinion": "El personal es muy amable y la pizza de cuatro quesos es una locura. ¡Volveré pronto!",
+        "Rate": 5
+    },
+    {
+        "name": "Mario Pérez",
+        "opinion": "Lugar acogedor, atención de lujo y la pizza es simplemente espectacular.",
+        "Rate": 5
+    },
+    {
+        "name": "Elena Vargas",
+        "opinion": "El equilibrio entre los ingredientes y la masa es perfecto. Se nota la calidad.",
+        "Rate": 5
+    },
+    {
+        "name": "Tomás Navarro",
+        "opinion": "La pizza estaba rica, aunque el local estaba un poco lleno y tardaron en atendernos.",
+        "Rate": 3
+    },
+    {
+        "name": "Valeria Ortega",
+        "opinion": "La pizza margarita es simplemente perfecta, un clásico bien hecho.",
         "Rate": 5
     }
 ]
