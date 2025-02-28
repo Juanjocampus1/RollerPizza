@@ -1,17 +1,19 @@
 ---
 const slides = [
     {
-        title: 'Medianas 6.95€. Familiares 11.95€',
+        titleC: 'Clasicas: Medianas 6.50€. Familiares 10.50€',
+        titleP: 'Premium: Medianas 7.50€. Familiares 11.50€',
         content: 'Todos los días, en local o para recoger, las mejores pizzas al alcance de todos',
         image: '/images/slider/pizza_slider_1.webp'
     },
     {
-        title: 'Entrantes: 1 por 3.75€. 2 por 6€.',
+        titleC: 'Entrantes: 1 por 3.75€. 2 por 6€.',
         content: 'Perfectos para abrir boca.',
         image: '/images/slider/bread_slider_2.webp'
     },
     {
-        title: 'Medianas 5,95€. Familiares 9.95€.',
+        titleC: 'Clasicas: Medianas 7,50€. Familiares 12.50€.',
+        titleP: 'Premium: Medianas 8,50€. Familiares 13.50€.',
         content: 'De lunes a jueves no festivos en local o para recoger. De 13.00 a 16.00',
         image: '/images/slider/pizza_slider_3.webp'
     }
@@ -23,15 +25,16 @@ const { class: className } = Astro.props
 <div class={`relative overflow-hidden h-full w-full ${className}`}>
     <div class="flex w-[300%] animate-slide">
         {
-            slides.map(({ title, content, image }) => (
+            slides.map(({ titleC, titleP,  content, image }) => (
                 <div class="flex-shrink-0 w-full h-full relative">
                     <img
                         src={image}
-                        alt={title}
+                        alt={titleC}
                         class="w-full h-full object-cover"
                     />
                     <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center">
-                        <h2 class="text-3xl font-bold mb-2">{title}</h2>
+                        <h2 class="text-3xl font-bold mb-2"> {titleC}</h2>
+                        <h2 class="text-3xl font-bold mb-2"> {titleP}</h2>
                         <p class="text-lg">{content}</p>
                     </div>
                 </div>

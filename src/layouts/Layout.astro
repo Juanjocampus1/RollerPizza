@@ -25,16 +25,44 @@ const { description, title } = Astro.props;
 </html>
 
 <style>
-	body {
-		overflow-x: hidden;
-		margin: 0;
-		padding: 0;
-	}
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
 
-	main {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-	}
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* Estilos para móviles */
+    @media (max-width: 600px) {
+        main {
+            padding: 10px;
+        }
+    }
+
+    /* Estilos para pantallas ultra anchas */
+    @media (min-width: 1600px) {
+        main {
+            max-width: 1400px;
+        }
+    }
+
+    /* Estilos para televisores */
+    @media (min-width: 1920px) {
+        main {
+            max-width: 1800px;
+        }
+    }
+
+    /* Estilos para iPads */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        main {
+            padding: 20px;
+        }
+    }
 </style>
